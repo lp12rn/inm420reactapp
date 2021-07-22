@@ -3,74 +3,56 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link
+  Link,
+  NavLink
 } from "react-router-dom";
-
-import logo from './logo.svg';
-import './App.css';
-
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 export default function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
+      <div >
+        {/* Header will be yellow */}
+        <header className="basicheader">
+          {/* Site title */}
+          <h1>this is bananas</h1>
+          <nav>
+            <ul>
+              <li>
+                <NavLink to="/" activeClassName="selected" exact={true}>Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" activeClassName="selected">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/projects" activeClassName="selected">Projects</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" activeClassName="selected">Contact</NavLink>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/contact">
+            <Contact />
           </Route>
-          <Route path="/">
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/" exact={true}>
             <Home />
           </Route>
         </Switch>
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <div className="App">
-  <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>Home home home Edit <code>src/App.js</code> and save to reload.</p>
-    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-  </header>
-</div>;
-}
-
-function About() {
-  return             <div className="App">
-  <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>ABOUT about Edit <code>src/App.js</code> and save to reload.</p>
-    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-  </header>
-</div>;
-}
-
-function Users() {
-  return             <div className="App">
-  <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>Users users Edit <code>src/App.js</code> and save to reload.</p>
-    <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>
-  </header>
-</div>;
 }

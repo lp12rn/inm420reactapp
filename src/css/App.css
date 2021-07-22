@@ -1,0 +1,210 @@
+/* --------- DEFAULT --------- */
+body {
+  background-color: #fff;
+}
+/* responsive images */
+img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+/* Hyperlink styling */
+a {
+  font-family: 'Amatic SC', cursive;
+  color: #000;
+  font-size: 25px;
+  display: inline;
+  text-decoration: none;
+}
+/* nav link list */
+li {
+  display: inline;
+  font-family: 'Amatic SC', cursive;
+  color: #000;
+  font-size: 35px;
+  padding-left: 7px;
+}
+/* Flexbox for header */
+.basicheader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  background-color: #FFD51B;
+}
+/* HEADERS FOR CONTENT */
+/* site name */
+h1 {
+  font-family: 'Amatic SC', cursive;
+  color: #000;
+  font-size: 50px;
+  font-weight: 700;
+  display: inline;
+}
+/* article header (yellow) */
+h2 {
+  font-family: 'Amatic SC', cursive;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #000;
+  display: inline;
+  border-radius: 33%;
+  padding: 5px;
+  text-align: center;
+}
+/* article header yellow */
+h3 {
+  font-family: 'Amatic SC', cursive;
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #FFD51B;
+  display: inline;
+  border-radius: 33%;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Paragraph styling for both mobile and desktop */
+p {
+  font-family: courier;
+  font-size: 15px;
+  color: #000;
+  margin: 20px;
+  padding: 30px, 0px, 0px, 0px;
+  text-align: justify;
+}
+/* Articles spacing */
+.randflex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 25px;
+}
+/* Footer base styling */
+footer {
+  background-color: #fff;
+  border-top: #000 15px dotted;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+/* Paragraph inside footer */
+.footerp {
+  font-family: courier;
+  font-size: 10px;
+  color: #000;
+  margin-left: 20px;
+  border-left: 5px solid #000;
+  padding-left: 10px;
+}
+/* listt for bottom site map links */
+ul.footlist li {
+  margin: 0 auto;
+}
+/* ---------- DESKTOP --------- */
+@media only screen and (min-width: 600px) {
+  /* White stripe under header */
+  header {
+      border-bottom: 22px #fff double;
+  }
+  /* Hyperlinks */
+  a {
+      font-family: 'Amatic SC', cursive;
+      color: #000;
+      font-size: 60px;
+      display: inline;
+      text-decoration: none;
+  }
+  /* Hyperlinks (white hover) */
+  a:hover {
+      font-family: 'Amatic SC', cursive;
+      color: #fff;
+      font-size: 60px;
+  }
+  /* Navlink acivated */
+  .selected {
+    color: #fff;
+  }
+  /* Site title */
+  h1 {
+      font-family: 'Amatic SC', cursive;
+      color: #000;
+      font-size: 75px;
+      font-weight: 700;
+  }
+  /* article header black */
+  h2 {
+      font-family: 'Amatic SC', cursive;
+      color: #ffffff;
+      font-size: 43px;
+      font-weight: 700;
+      background-color: #000;
+      display: inline;
+      border-radius: 33%;
+      padding: 5px;
+      text-align: center;
+  }
+  /* article header yellow */
+  h3 {
+    font-family: 'Amatic SC', cursive;
+    color: #000;
+    font-size: 43px;
+    font-weight: 700;
+    background-color: #FFD51B;
+    display: inline;
+    border-radius: 33%;
+    padding: 5px;
+    text-align: center;
+}
+
+  /* list item for hyper links */
+  li {
+      display: inline;
+      font-family: 'Amatic SC', cursive;
+      color: #000;
+      font-size: 35px;
+      display: inline;
+      padding-left: 20px;
+  }
+  /* Flexbox holding the articles */
+  .randflex {
+      display: flex;
+      flex-direction: column;
+      max-width: 750px;
+      margin: 25px;
+  }
+  /* article spacing */
+  article {
+      margin: 20px, 0px, 40px, 0px;
+      padding: 20px;
+  }
+  /* flexbox for main content */
+  .mainflex {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+  }
+  /* footer flexbox */
+  footer {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+  /* spacing for bottom hyperlink */
+  .footlist {
+      margin-right: 60px;
+  }
+  /* footer paragraph */
+  .footerp {
+      font-family: courier;
+      font-size: 10px;
+      color: #000;
+      margin-left: 20px;
+      border-left: 5px solid #000;
+      padding: 10px;
+  }
+}
